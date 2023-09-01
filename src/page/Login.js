@@ -9,12 +9,18 @@ const Login = ({ setAuthenticate, to }) => {
     setAuthenticate(true);
     navigate("/");
   };
+
+  const goToSignUp = (event) => {
+    event.preventDefault();
+    setAuthenticate(false);
+    navigate("/SighUp");
+  };
   return (
     <Container className="login-area">
       <Form className="login-form" onSubmit={login}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Label>Id</Form.Label>
+          <Form.Control type="id" placeholder="id" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -22,9 +28,22 @@ const Login = ({ setAuthenticate, to }) => {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-        <Button variant="danger" type="submit">
-          Login
+        <Button className="login" variant="danger" type="submit">
+          로그인
         </Button>
+        <span>
+          <Button className="Id" variant="danger" type="submit">
+            아이디 찾기
+          </Button>
+          <Button className="PassWord" variant="danger" type="submit">
+            비번 찾기
+          </Button>
+        </span>
+        <span>
+          <Button className="SighUp" variant="danger" onClick={goToSignUp}>
+            회원가입
+          </Button>
+        </span>
       </Form>
     </Container>
   );

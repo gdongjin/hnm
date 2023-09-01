@@ -6,6 +6,7 @@ import Navbar from "./component/Navbar";
 import ProductAll from "./page/ProductAll";
 import Login from "./page/Login";
 import PrivateRoute from "./Route/PrivateRoute";
+import SighUp from "./page/SighUp";
 
 function App() {
   let [authenticate, setAuthenticate] = useState(false);
@@ -14,6 +15,7 @@ function App() {
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
+        <Route path="/SighUp" element={<SighUp />} />
         <Route
           path="/login"
           element={<Login setAuthenticate={setAuthenticate} />}

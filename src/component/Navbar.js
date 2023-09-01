@@ -4,7 +4,7 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-// 빌드테스트
+
 const Navbar = ({ authenticate, setAuthenticate }) => {
   const menuList = [
     "여성",
