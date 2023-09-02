@@ -7,6 +7,7 @@ import ProductAll from "./page/ProductAll";
 import Login from "./page/Login";
 import PrivateRoute from "./Route/PrivateRoute";
 import SighUp from "./page/SighUp";
+//
 
 function App() {
   let [authenticate, setAuthenticate] = useState(false);
