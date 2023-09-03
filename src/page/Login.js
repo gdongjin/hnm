@@ -38,11 +38,13 @@ const Login = ({ setAuthenticate, to }) => {
           </Button>
           <ButtonGroup aria-label="Second group" className="Id_pass">
             <Button variant="primary">아이디 찾기</Button>
-            <Button variant="primary">비밀번호 찾기</Button>
+            <Button className="Pass" variant="primary">
+              비밀번호 찾기
+            </Button>
           </ButtonGroup>
           <Button
             aria-label="Third group"
-            className="ml-2"
+            className="SighUp"
             variant="primary"
             onClick={goToSignUp}
           >
