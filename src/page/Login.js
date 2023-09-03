@@ -15,8 +15,20 @@ const Login = ({ setAuthenticate, to }) => {
 
   const goToSignUp = (event) => {
     event.preventDefault();
-    setAuthenticate(false);
+    setAuthenticate(true);
     navigate("/SighUp");
+  };
+
+  const goToIdSearch = (event) => {
+    event.preventDefault();
+    setAuthenticate(true);
+    navigate("/IdSearch");
+  };
+
+  const goToPasswordSearch = (event) => {
+    event.preventDefault();
+    setAuthenticate(true);
+    navigate("/PasswordSearch");
   };
 
   return (
@@ -33,12 +45,18 @@ const Login = ({ setAuthenticate, to }) => {
         </Form.Group>
 
         <ButtonGroup>
-          <Button aria-label="First_Group" variant="primary">
+          <Button aria-label="First_Group" variant="primary" onClick={login}>
             로그인
           </Button>
           <ButtonGroup aria-label="Second group" className="Id_pass">
-            <Button variant="primary">아이디 찾기</Button>
-            <Button className="Pass" variant="primary">
+            <Button variant="primary" onClick={goToIdSearch}>
+              아이디 찾기
+            </Button>
+            <Button
+              className="Pass"
+              variant="primary"
+              onClick={goToPasswordSearch}
+            >
               비밀번호 찾기
             </Button>
           </ButtonGroup>

@@ -7,6 +7,8 @@ import ProductAll from "./page/ProductAll";
 import Login from "./page/Login";
 import PrivateRoute from "./Route/PrivateRoute";
 import SighUp from "./page/SighUp";
+import Idsearch from "./page/Idsearch";
+import PasswordSearch from "./page/PasswordSearch";
 //
 
 function App() {
@@ -16,7 +18,18 @@ function App() {
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
-        <Route path="/SighUp" element={<SighUp />} />
+        <Route
+          path="/SighUp"
+          element={<SighUp setAuthenticate={setAuthenticate} />}
+        />
+        <Route
+          path="/Idsearch"
+          element={<Idsearch setAuthenticate={setAuthenticate} />}
+        />
+        <Route
+          path="/PasswordSearch"
+          element={<PasswordSearch setAuthenticate={setAuthenticate} />}
+        />
         <Route
           path="/login"
           element={<Login setAuthenticate={setAuthenticate} />}
