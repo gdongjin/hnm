@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-//
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import ToggleButton from "react-bootstrap/ToggleButton";
+
 const Login = ({ setAuthenticate, to }) => {
   console.log("tototo", to);
   const navigate = useNavigate();
@@ -16,6 +18,7 @@ const Login = ({ setAuthenticate, to }) => {
     setAuthenticate(false);
     navigate("/SighUp");
   };
+
   return (
     <Container className="login-area">
       <Form className="login-form" onSubmit={login}>
@@ -29,22 +32,21 @@ const Login = ({ setAuthenticate, to }) => {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-        <Button className="login" variant="danger" type="submit">
-          로그인
-        </Button>
-        <span>
-          <Button className="Id" variant="danger" type="submit">
-            아이디 찾기
-          </Button>
-          <Button className="PassWord" variant="danger" type="submit">
-            비번 찾기
-          </Button>
-        </span>
-        <span>
-          <Button className="SighUp" variant="danger" onClick={goToSignUp}>
+        <ButtonGroup aria-label="First_Group">
+          <Button variant="primary">로그인</Button>
+          <ButtonGroup aria-label="Second group" className="ml-2">
+            <Button variant="primary">아이디 찾기</Button>
+            <Button variant="primary">비밀번호 찾기</Button>
+          </ButtonGroup>
+          <Button
+            aria-label="Third group"
+            className="ml-2"
+            variant="primary"
+            onClick={goToSignUp}
+          >
             회원가입
           </Button>
-        </span>
+        </ButtonGroup>
       </Form>
     </Container>
   );
