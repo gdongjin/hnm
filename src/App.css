@@ -160,7 +160,7 @@ body {
   display: inline-block;
 } */
 
-/* .Id {
+.Id {
   display: inline-block;
   margin-left: 30px;
 }
@@ -172,7 +172,7 @@ body {
 
 .SighUp {
   margin-left: 230px;
-} */
+}
 
 .SighUp-form {
   width: 40em;
@@ -180,4 +180,8 @@ body {
 .SighUp-area {
   display: flex;
   justify-content: center;
+}
+
+.Id_pass {
+  margin-left: 20px;
 }

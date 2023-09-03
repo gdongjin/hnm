@@ -32,9 +32,11 @@ const Login = ({ setAuthenticate, to }) => {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-        <ButtonGroup aria-label="First_Group">
-          <Button variant="primary">로그인</Button>
-          <ButtonGroup aria-label="Second group" className="ml-2">
+        <ButtonGroup>
+          <Button aria-label="First_Group" variant="primary">
+            로그인
+          </Button>
+          <ButtonGroup aria-label="Second group" className="Id_pass">
             <Button variant="primary">아이디 찾기</Button>
             <Button variant="primary">비밀번호 찾기</Button>
           </ButtonGroup>
