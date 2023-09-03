@@ -14,7 +14,7 @@ import PasswordSearch from "./page/PasswordSearch";
 function App() {
   let [authenticate, setAuthenticate] = useState(false);
   return (
-    <div>
+    <div className="container">
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
