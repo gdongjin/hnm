@@ -23,10 +23,14 @@ body {
   list-style-type: none;
   padding: 20px;
 }
+
+.meny li {
+  margin-right: 1000px;
+}
 .menu li a {
   text-decoration: none;
   color: black;
-  margin-left: 50px;
+  margin: 0 auto;
 }
 
 .nav-menu-area {
@@ -169,7 +173,12 @@ body {
 .SighUp-form {
   width: 40em;
 }
+
 .SighUp-area {
   display: flex;
   justify-content: center;
+}
+
+.Highdrop {
+  margin-left: 70px;
 }
