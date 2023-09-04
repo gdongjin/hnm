@@ -4,15 +4,20 @@ body {
 
 .nav-header {
   display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
   justify-content: space-between;
-  align-items: center;
-  margin-right: 20px;
 }
 
-.nav-header * {
-  margin-right: 10px;
-  margin-top: 20px;
+.Logo {
+  margin-left: 200px;
 }
+
+.LogSet {
+  margin-top: 40px;
+  margin-right: 200px;
+}
+
 .menu {
   display: flex;
   list-style-type: none;
@@ -21,14 +26,9 @@ body {
 .menu li a {
   text-decoration: none;
   color: black;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
-.nav-logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 .nav-menu-area {
   display: flex;
   justify-content: center;
@@ -116,12 +116,6 @@ body {
   }
 }
 
-@media (min-width: 100%) {
-  html {
-    width: 100vw;
-    height: 100vh;
-  }
-}
 .side-menu {
   height: 100%;
   width: 250px;
@@ -169,7 +163,7 @@ body {
 
 .Pass {
   margin-left: 10px !important;
-  margin-right: 129px;
+  margin-right: 124px;
 }
 
 .SighUp-form {
