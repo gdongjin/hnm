@@ -9,12 +9,11 @@ import PrivateRoute from "./Route/PrivateRoute";
 import SighUp from "./page/SighUp";
 import Idsearch from "./page/Idsearch";
 import PasswordSearch from "./page/PasswordSearch";
-//
 
 function App() {
   let [authenticate, setAuthenticate] = useState(false);
   return (
-    <div className="container">
+    <div>
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />

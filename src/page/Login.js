@@ -44,7 +44,7 @@ const Login = ({ setAuthenticate, to }) => {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-        <ButtonGroup>
+        <ButtonGroup className="Button">
           <Button aria-label="First_Group" variant="primary" onClick={login}>
             로그인
           </Button>

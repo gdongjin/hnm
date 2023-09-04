@@ -53,7 +53,7 @@ const SighUp = () => {
         </Form.Group>
 
         <span>
-          <Button className="SighUp" variant="danger">
+          <Button className="SighUp" variant="primary">
             회원가입
           </Button>
         </span>
