@@ -19,6 +19,12 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
       navigate(`?q=${event.target.value}`);
     }
   };
+
+  const Communityboard = (event) => {
+    event.preventDefault();
+    setAuthenticate(true);
+    navigate("/Communityboard");
+  };
   return (
     <div>
       <div className="side-menu" style={{ width: width }}>
@@ -39,7 +45,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
       <div className="nav-header">
         <div className="Logo">
           <Link to="/">
-            <img width={100} src="FNH.png" />
+            <img width={100} src="FNH3.png" />
           </Link>
         </div>
 
@@ -47,7 +53,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           {authenticate ? (
             <div onClick={() => setAuthenticate(false)}>
               <FontAwesomeIcon icon={faUser} />
-              <span tyle={{ cursor: "pointer" }}>로그아웃</span>
+              <span style={{ cursor: "pointer" }}>로그아웃</span>
             </div>
           ) : (
             <div onClick={() => navigate("/login")}>
@@ -69,7 +75,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
                 <Dropdown.Menu>
                   {menu === "게시판" && (
                     <>
-                      <Dropdown.Item eventKey="1">
+                      <Dropdown.Item eventKey="1" onClick={Communityboard}>
                         커뮤니티 게시판
                       </Dropdown.Item>
                       <Dropdown.Item eventKey="2">
@@ -102,11 +108,6 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             </li>
           ))}
         </ul>
-
-        <div className="search-box">
-          <FontAwesomeIcon icon={faSearch} />
-          <input type="text" placeholder="제품검색" onKeyPress={onCheckEnter} />
-        </div>
       </div>
     </div>
   );
